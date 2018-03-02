@@ -27,8 +27,8 @@ def won?(board)
       if (position1 == "X" && position2 == "X" && position3 == "X") || (position1 == "O" && position2 == "O" && position3 == "O")
         return win_combo
       end
-      # hint -->  .detect and .all
   end
+  return false
 end
 
 def full?(board)
