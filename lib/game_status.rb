@@ -47,6 +47,6 @@ end
 
 def winner(board)
   if won?(board) == true
-    return board[0]
+    puts board[0]
   end
 end
