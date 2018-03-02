@@ -46,7 +46,7 @@ def over?(board)
 end
 
 def winner(board)
-  if won?(board) == true 
-    return win_combo[0][1]
+  if won?(board) == true
+    return board[0]
   end
 end
