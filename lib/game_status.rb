@@ -47,6 +47,6 @@ end
 
 def winner(board)
   if won?(board) == true
-    puts board[0]
+    puts board(won?)[0]
   end
 end
