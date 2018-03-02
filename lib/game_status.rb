@@ -21,13 +21,14 @@ WIN_COMBINATIONS = [
 def won?(board)
   WIN_COMBINATIONS.each do |win_combo|
     binding.pry
-      # position = board[win_combo[0, 1, 2]] #how to check win_combo against board?
-      # if position == position_taken?(board, index)
-      #   # return WIN_COMBINATIONS[win_array]
-      # else
-      #   false
-      # end
-
+      position1 = board[win_combo[0]]
+      position2 = board[win_combo[1]]
+      position3 = board[win_combo[2]]
+      if (position1 == "X" && position2 == "X" && position3 == "X") || (position1 == "O" && position2 == "O" && position3 == "O")
+        return win_combo
+      else
+        false
+      end
       # hint -->  .detect and .all
   end
 end
