@@ -20,7 +20,7 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.each do |win_combo|
-    binding.pry
+    # binding.pry
       position1 = board[win_combo[0]]
       position2 = board[win_combo[1]]
       position3 = board[win_combo[2]]
