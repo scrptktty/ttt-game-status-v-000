@@ -46,7 +46,12 @@ def over?(board)
 end
 
 def winner(board)
-  if won?(board) == true
-    return WIN_COMBINATIONS[0]
+  WIN_COMBINATIONS.detect do |win_combo|
+    position1 = board[win_combo[0]]
+    position2 = board[win_combo[1]]
+    position3 = board[win_combo[2]]
+      if (position1 == position2 && position2 == position3) && position_taken?(board, win_combo[0])
+        return win_combo[0]
+      end
   end
 end
