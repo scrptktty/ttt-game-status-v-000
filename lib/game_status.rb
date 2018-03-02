@@ -51,7 +51,7 @@ def winner(board)
     position2 = board[win_combo[1]]
     position3 = board[win_combo[2]]
       if (position1 == position2 && position2 == position3) && position_taken?(board, win_combo[0])
-        return win_combo[0][0]
+        return position1
       end
   end
 end
