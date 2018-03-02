@@ -19,7 +19,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.each do |win_combo|
+  WIN_COMBINATIONS.detect do |win_combo|
     # binding.pry
       position1 = board[win_combo[0]]
       position2 = board[win_combo[1]]
@@ -28,7 +28,6 @@ def won?(board)
         return win_combo
       end
   end
-  return false
 end
 
 def full?(board)
