@@ -49,6 +49,5 @@ def winner(board)
   binding.pry
   if won?(board) == true
     return won?(board)
-
   end
 end
